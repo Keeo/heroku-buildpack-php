@@ -40,7 +40,7 @@ location ~ ^/(app|app_dev|config|app_heroku)\.php(/|$) {
         #
  
         add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Paginate,Authorization,X-Order,Created-Entity-Id,Location,Link';
-        
+        add_header 'Access-Control-Expose-Headers' 'Created-Entity-Id';
         #
         # Tell client that this pre-flight info is valid for 20 days
         #
@@ -57,6 +57,7 @@ location ~ ^/(app|app_dev|config|app_heroku)\.php(/|$) {
         add_header 'Access-Control-Allow-Origin' '*';
         add_header 'Access-Control-Allow-Credentials' 'true';
         add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE, PATCH, LINK, UNLINK';
+        add_header 'Access-Control-Expose-Headers' 'Created-Entity-Id';
         add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Paginate,Authorization,X-Order,Created-Entity-Id,Location,Link';
  
      }
